@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">Undead Digest</string>
+    <string name="hello_world">Hello world! UnDead Digest!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">UD Digest</string>
+    <string name="vaccine_button">Vaccine</string>
+    <string name="shoot">shoot</string>
+    <string name="game_title">UnDead Digest</string>
+    <string name="title_activity_shooter">Shooter</string>
+    <string name="prefs_name">GameFile</string>
+    <string name="UnDead">UnDead</string>
+    <string name="Alive">Alive</string>
+    <string name="buy_molotovs">Buy Molotovs</string>
+    <string name="view_weapons">View Weapons</string>
+    <string name="save_error">We are sorry, but there has been some difficulty saving your file.</string>
+    <string name="title_activity_un_dead_digest">UnDeadDigest</string>
+    <string name="game_intro">Welcome to the (Accelerated) UnDead Digest. If you are not UnDead, your Zombie Notification System (ZNS) has been started. Do the right thing: distribute Vaccines to other citizens.</string>
+    <string name="title_activity_view_weapons">ViewWeapons</string>
+    <string name="title_activity_camera_feed">CameraFeed</string>
+
+</resources>

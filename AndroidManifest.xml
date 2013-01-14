@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pachakutech.undead_digest"
+    android:versionCode="1"
+    android:versionName="1.0" android:installLocation="preferExternal">
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    
+	<uses-feature android:name="android.hardware.camera" />
+ 	<uses-feature android:name="android.hardware.camera.autofocus" />
+	
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Undead_Digest"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="PylonService"
+            android:process=":remote" >
+        </receiver>
+
+        <service
+            android:name="InfectionController"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name=".Shooter"
+            android:label="@string/title_activity_shooter"
+            android:launchMode="singleInstance" >
+           
+        	<meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pachakutech.undead_digest" />
+        </activity>
+        
+        <activity
+            android:name=".undead_digest"
+      		android:label="@string/app_name" 
+      		android:screenOrientation="landscape">
+                  
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pachakutech.undead_digest" />
+        </activity>
+        
+        <activity
+            android:name=".ViewWeapons"
+            android:label="@string/title_activity_view_weapons" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pachakutech.undead_digest" />
+        </activity>
+
+        <service
+            android:name=".SetAlarmFromSaveGame"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        
+        <service
+            android:name=".GameSave"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        
+        <activity
+            android:name=".CameraFeed"
+            android:label="@string/title_activity_camera_feed" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pachakutech.undead_digest" />
+        </activity>
+    </application>
+
+<supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:anyDensity="true" android:resizeable="true"></supports-screens>
+    
+</manifest>
