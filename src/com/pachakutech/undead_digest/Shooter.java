@@ -47,7 +47,7 @@ public class Shooter extends NvGLES2Activity
 		private float[] gravity = new float[3];
 		private float[] linear_acceleration = new float[3];
 		protected float[] newQuaternion = new float[4];
-		protected int mSensorDelay = SensorManager.SENSOR_DELAY_NORMAL;
+		protected int mSensorDelay = SensorManager.SENSOR_DELAY_FASTEST;
 		private Timer timer = new Timer();
 		private boolean firstReading;
 		  
@@ -228,7 +228,7 @@ public class Shooter extends NvGLES2Activity
 					
 					if (firstReading)
 					{
-						  shooterHandler.sendEmptyMessageDelayed(1, 600);
+						  shooterHandler.sendEmptyMessageDelayed(1, 100);
 					  	  shooterHandler.sendEmptyMessageDelayed(2, 30000);
 					  	  firstReading = false;
 					}
